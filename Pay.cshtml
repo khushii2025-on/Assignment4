@@ -1,0 +1,11 @@
+﻿<script src="https://js.stripe.com/dahlia/stripe.js"></script>
+<section>
+    <div>
+        <h3>Order Total</h3>
+        <h5>@String.Format("{0:c}", ViewBag.Total)</h5>
+        <p>@ViewBag.PublishableKey</p>
+    </div>
+    <form action="/Shop/ProcessPayment" method="POST">
+        <button type="submit" id="checkout-button">Proceed to Payment</button>
+    </form>
+</section>
